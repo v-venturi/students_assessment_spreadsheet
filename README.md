@@ -1,9 +1,10 @@
 ## Student Assessment SpreadSheet
-### A Java application to read the Google Sheets data and return if the students are approved
+### A Java application to read the Google Sheets data and return if the students are approved according to the evaluation rules
 
 
-#### Java 16
-#### Gradle 7.4
+
+- Java 16
+- Gradle 7.4
 
 To run the application: 
 
