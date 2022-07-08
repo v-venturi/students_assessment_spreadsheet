@@ -20,8 +20,14 @@ import java.security.GeneralSecurityException;
 import static org.vventuri.models.constants.Commons.*;
 
 
+/**
+ * The type Authentication.
+ */
 public class Authentication {
 
+    /**
+     * The Http transport.
+     */
     static final NetHttpTransport HTTP_TRANSPORT;
 
     static {
@@ -32,9 +38,19 @@ public class Authentication {
         }
     }
 
+    /**
+     * Instantiates a new Authentication.
+     */
     public Authentication() {
     }
 
+    /**
+     * Gets credentials.
+     *
+     * @param HTTP_TRANSPORT the http transport
+     * @return the credentials
+     * @throws IOException the io exception
+     */
     public static Credential getCredentials(final NetHttpTransport HTTP_TRANSPORT) throws IOException {
         // Load client secrets.
         InputStream in = SpreadSheetApplication.class.getResourceAsStream(CREDENTIALS_FILE_PATH);
@@ -52,6 +68,12 @@ public class Authentication {
 
     }
 
+    /**
+     * Service sheets.
+     *
+     * @return the sheets
+     * @throws IOException the io exception
+     */
     public static Sheets service() throws IOException {
         return new Sheets.Builder(HTTP_TRANSPORT, JSON_FACTORY, getCredentials(HTTP_TRANSPORT))
                 .setApplicationName(APPLICATION_NAME)

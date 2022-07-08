@@ -1,5 +1,8 @@
 package org.vventuri.models.entities;
 
+/**
+ * The type Student.
+ */
 public class Student {
     private double p1;
     private double p2;
@@ -33,11 +36,22 @@ public class Student {
         this.absences = absences;
     }
 
+    /**
+     * Gets grade for final exam.
+     *
+     * @return the grade necessary to graduate
+     */
     public double getGradeForFinalExam() {
         if (this.getAverage() >= 50 && this.getAverage() < 70) {
             return Math.ceil(100 - this.getAverage());
         } else return 0;
     }
+
+    /**
+     * Gets situation.
+     *
+     * @return the situation of the student according to the evaluation rules
+     */
     public String getSituation() {
         if (this.getAbsences() > 60 * 0.25) {
             return "Reprovado por Falta";

@@ -7,6 +7,9 @@ import com.google.api.services.sheets.v4.SheetsScopes;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * The type Commons.
+ */
 public class Commons {
     public static final String SPREADSHEET_ID = "1sAmmMvlHU21gJytwR466Wke8pyncKEIyojeWwGhLW48";
     public static final String RANGE = "engenharia_de_software!C4:H27";

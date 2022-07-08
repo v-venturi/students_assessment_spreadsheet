@@ -8,19 +8,28 @@ import java.io.IOException;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
+import java.util.logging.Logger;
 
+
+import static java.util.logging.Logger.*;
 import static org.vventuri.models.constants.Commons.RANGE;
 import static org.vventuri.models.constants.Commons.SPREADSHEET_ID;
 
+/**
+ * The type Spread sheet manipulation.
+ */
 public class SpreadSheetManipulation {
     Student student = new Student();
     List<List<Object>> values;
+    static Logger logger = getLogger("Log Info");
+
     /**
-     * Read sheet.
+     * Read and write the sheet.
      *
      * @throws IOException the io exception
      */
     public void readAndWriteSheet() throws IOException {
+        logger.info(",,,,,,,,,Starting read the spreadsheet,,,,,,,,,");
         ValueRange response = Authentication.service().spreadsheets().values()
                 .get(SPREADSHEET_ID, RANGE)
                 .execute();
@@ -34,7 +43,8 @@ public class SpreadSheetManipulation {
                 student.setP1(Double.parseDouble((String) row.get(1)));
                 student.setP2(Double.parseDouble((String) row.get(2)));
                 student.setP3(Double.parseDouble((String) row.get(3)));
-                System.out.println(student);
+
+                logger.info("Calculating the grades and the situation of the student..." + (i+1) +"\n " + student.getSituation() );
                 ValueRange body = new ValueRange().setMajorDimension("COLUMNS")
                         .setValues(Arrays.asList(Collections.singletonList(student.getSituation()),
                                 List.of(student.getGradeForFinalExam())));
@@ -43,6 +53,7 @@ public class SpreadSheetManipulation {
                         .setValueInputOption("USER_ENTERED")
                         .execute();
             }
+            logger.info("End of application, successful update");
         }
     }
 }
