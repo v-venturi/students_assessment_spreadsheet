@@ -18,6 +18,7 @@ public class Commons {
     public static final String TOKENS_DIRECTORY_PATH = "tokens";
     public static final List<String> SCOPES = Collections.singletonList(SheetsScopes.SPREADSHEETS);
     public static final String CREDENTIALS_FILE_PATH = "/credentials.json";
+    public static final Integer RANGE_START = 4;
 
 
 }

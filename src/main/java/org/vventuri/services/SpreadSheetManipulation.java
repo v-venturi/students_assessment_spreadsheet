@@ -11,8 +11,7 @@ import java.util.List;
 import java.util.logging.Logger;
 
 import static java.util.logging.Logger.getLogger;
-import static main.java.org.vventuri.models.constants.Commons.RANGE;
-import static main.java.org.vventuri.models.constants.Commons.SPREADSHEET_ID;
+import static main.java.org.vventuri.models.constants.Commons.*;
 
 
 /**
@@ -49,7 +48,7 @@ public class SpreadSheetManipulation {
                         .setValues(Arrays.asList(Collections.singletonList(student.getSituation()),
                                 List.of(student.getGradeForFinalExam())));
                 Authentication.service().spreadsheets().values().update(SPREADSHEET_ID,
-                                "G" + (4 + i), body)
+                                "G" + (RANGE_START + i), body)
                         .setValueInputOption("USER_ENTERED")
                         .execute();
             }
