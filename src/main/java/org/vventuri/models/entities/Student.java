@@ -1,4 +1,4 @@
-package org.vventuri.models.entities;
+package main.java.org.vventuri.models.entities;
 
 /**
  * The type Student.

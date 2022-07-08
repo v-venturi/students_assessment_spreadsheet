@@ -1,8 +1,8 @@
-package org.vventuri.services;
+package main.java.org.vventuri.services;
 
 import com.google.api.services.sheets.v4.model.ValueRange;
-import org.vventuri.authentication.Authentication;
-import org.vventuri.models.entities.Student;
+import main.java.org.vventuri.authentication.Authentication;
+import main.java.org.vventuri.models.entities.Student;
 
 import java.io.IOException;
 import java.util.Arrays;
@@ -10,10 +10,10 @@ import java.util.Collections;
 import java.util.List;
 import java.util.logging.Logger;
 
+import static java.util.logging.Logger.getLogger;
+import static main.java.org.vventuri.models.constants.Commons.RANGE;
+import static main.java.org.vventuri.models.constants.Commons.SPREADSHEET_ID;
 
-import static java.util.logging.Logger.*;
-import static org.vventuri.models.constants.Commons.RANGE;
-import static org.vventuri.models.constants.Commons.SPREADSHEET_ID;
 
 /**
  * The type Spread sheet manipulation.
@@ -44,7 +44,7 @@ public class SpreadSheetManipulation {
                 student.setP2(Double.parseDouble((String) row.get(2)));
                 student.setP3(Double.parseDouble((String) row.get(3)));
 
-                logger.info("Calculating the grades and the situation of the student..." + (i+1) +"\n " + student.getSituation() );
+                logger.info("Calculating the grades and the situation of the student " + (i+1) +"...\n " + student.getSituation() );
                 ValueRange body = new ValueRange().setMajorDimension("COLUMNS")
                         .setValues(Arrays.asList(Collections.singletonList(student.getSituation()),
                                 List.of(student.getGradeForFinalExam())));

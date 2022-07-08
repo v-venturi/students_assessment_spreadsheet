@@ -1,4 +1,4 @@
-package org.vventuri.models.constants;
+package main.java.org.vventuri.models.constants;
 
 import com.google.api.client.json.JsonFactory;
 import com.google.api.client.json.gson.GsonFactory;

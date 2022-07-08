@@ -1,7 +1,9 @@
-package org.vventuri;
+package main.java.org.vventuri;
 
 
-import org.vventuri.services.SpreadSheetManipulation;
+
+
+import main.java.org.vventuri.services.SpreadSheetManipulation;
 
 import java.io.IOException;
 

@@ -1,4 +1,4 @@
-package org.vventuri.authentication;
+package main.java.org.vventuri.authentication;
 
 import com.google.api.client.auth.oauth2.Credential;
 import com.google.api.client.extensions.java6.auth.oauth2.AuthorizationCodeInstalledApp;
@@ -9,7 +9,7 @@ import com.google.api.client.googleapis.javanet.GoogleNetHttpTransport;
 import com.google.api.client.http.javanet.NetHttpTransport;
 import com.google.api.client.util.store.FileDataStoreFactory;
 import com.google.api.services.sheets.v4.Sheets;
-import org.vventuri.SpreadSheetApplication;
+import main.java.org.vventuri.SpreadSheetApplication;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -17,7 +17,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.security.GeneralSecurityException;
 
-import static org.vventuri.models.constants.Commons.*;
+import static main.java.org.vventuri.models.constants.Commons.*;
 
 
 /**
