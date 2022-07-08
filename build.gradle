@@ -1,9 +1,11 @@
-plugins {
-    id 'java'
-}
+apply plugin: 'java'
 
-group 'org.vventuri'
-version '1.0-SNAPSHOT'
+apply plugin: 'application'
+sourceSets.main.java.srcDirs = ['src']
+mainClassName = 'org.vventuri.SpreadSheetApplication'
+sourceCompatibility = 11
+targetCompatibility = 11
+version = '1.0'
 
 repositories {
     mavenCentral()
