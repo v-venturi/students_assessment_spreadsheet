@@ -1,4 +1,4 @@
-## Student Assessment SpreadSheet
+## Students Assessment SpreadSheet
 ### A Java application to read the Google Sheets data and return if the students are approved according to the evaluation rules
 
 
