@@ -3,7 +3,7 @@
 
 
 
-- Java 16
+- Java SE 16.0.2
 - Gradle 7.4
 
 To run the application: 
