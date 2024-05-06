@@ -1,0 +1,20 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: students_assessment_spreadsheet
+  description: A Java application to read the Google Sheets data and return if the students are approved according to the evaluation rules
+  labels:
+    example.com/custom: custom_label_value
+  annotations:    
+  tags:
+    - java
+  links:
+    - url: https://admin.example-org.com
+      title: Admin Dashboard
+      icon: dashboard
+      type: admin-dashboard
+spec:
+  type: service
+  lifecycle: production
+  owner: v-venturi
+  system: public-services
